@@ -31,7 +31,7 @@ module.exports = function(mode, inConfig = {}) {
                         loader: "emscript-loader",
                         options: {
                             includes: [
-                                path.join(cwd, "node_modules/leonmontealegre-physics-cpp/lib/cpp/include")
+                                path.join(cwd, "node_modules/leon-physics-lib/lib/cpp/include")
                             ]
                         }
                     }
