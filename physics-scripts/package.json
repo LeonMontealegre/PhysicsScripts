@@ -10,6 +10,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "cpp-wasm-loader": "^0.9.0",
+    "emscript-loader": "^1.0.0",
     "html-webpack-plugin": "^4.5.0",
     "react-dev-utils": "^10.2.1",
     "ts-loader": "^8.0.4",
@@ -18,7 +19,6 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpacktest": "file:../webpacktest",
     "yargs": "^16.0.3"
   },
   "peerDependencies": {
