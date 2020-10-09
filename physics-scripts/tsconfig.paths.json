@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
         "paths": {
-            "Vector": ["node_modules/leon-physics-lib/lib/ts/utils/math/Vector"],
-            "math/*": ["node_modules/leon-physics-lib/lib/ts/utils/math/*"],
-            "canvas/*": ["node_modules/leon-physics-lib/lib/ts/utils/canvas/*"],
-            "utils/*": ["node_modules/leon-physics-lib/lib/ts/utils/*"]
+            "Vector": ["node_modules/leon-physics-lib/dist/ts/utils/math/Vector"],
+            "math/*": ["node_modules/leon-physics-lib/dist/ts/utils/math/*"],
+            "canvas/*": ["node_modules/leon-physics-lib/dist/ts/utils/canvas/*"],
+            "utils/*": ["node_modules/leon-physics-lib/dist/ts/utils/*"]
         }
     }
 }
