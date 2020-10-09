@@ -1,13 +1,13 @@
 {
   "name": "leon-physics-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "files": [
     "lib/cpp",
     "dist/"
   ],
   "scripts": {
-    "build-ts": "rimraf ./dist && tsc --project lib/ts/tsconfig.json --declaration --outDir ./dist",
+    "build-ts": "rimraf ./dist && tsc --project lib/ts/tsconfig.json --declaration --outDir ./dist/ts/utils",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
