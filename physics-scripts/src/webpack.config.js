@@ -1,12 +1,35 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-
+const ts = require("typescript");
 const path = require("path");
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const defaultConfig = {
     entry: "src/",
     publicPath: "public/",
     output: "build/"
+}
+
+function getAliases(cwd) {
+    const file = path.join(cwd, "tsconfig.json");
+
+    const rawConfig = ts.readConfigFile(file, ts.sys.readFile).config;
+    const config = ts.parseJsonConfigFileContent(
+        rawConfig,
+        ts.sys,
+        cwd
+    );
+
+    let aliases = {};
+    if (config.options.paths) {
+        const paths = config.options.paths;
+        Object.entries(paths).forEach(([n, [p]]) => {
+            const name = n.replace("/*", "");
+            const url = path.resolve(cwd, p.replace("/*", ""));
+            aliases[name] = url;
+        });
+    }
+
+    return aliases;
 }
 
 module.exports = function(mode, inConfig = {}) {
@@ -39,7 +62,7 @@ module.exports = function(mode, inConfig = {}) {
             ]
         },
         resolve: {
-            plugins: [new TsconfigPathsPlugin({ configFile: path.join(cwd, "tsconfig.json") })],
+            alias: getAliases(cwd),
             extensions: [".ts", ".js", ".c", ".cpp"]
         },
         plugins: [
