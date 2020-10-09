@@ -29,7 +29,7 @@ module.exports = function(mode, inConfig = {}) {
                 {
                     test: /\.(c|cpp)$/,
                     use: {
-                        loader: "webpacktest",
+                        loader: "emscript-loader",
                         options: {
                             includes: [
                                 path.join(cwd, "node_modules/leonmontealegre-physics-cpp/lib/cpp/include")
