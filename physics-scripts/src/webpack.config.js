@@ -32,7 +32,7 @@ module.exports = function(mode, inConfig = {}) {
                         loader: "webpacktest",
                         options: {
                             includes: [
-                                path.join(cwd, "node_modules/leonmontealegre-physics-cpp/lib/include")
+                                path.join(cwd, "node_modules/leonmontealegre-physics-cpp/lib/cpp/include")
                             ]
                         }
                     }
