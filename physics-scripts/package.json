@@ -1,6 +1,6 @@
 {
-  "name": "leonmontealegre-physics-scripts",
-  "version": "1.0.3",
+  "name": "leon-physics-scripts",
+  "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -22,6 +22,6 @@
     "yargs": "^16.0.3"
   },
   "peerDependencies": {
-    "leonmontealegre-physics-cpp": "^1.0.0"
+    "leon-physics-lib": "^1.0.0"
   }
 }
