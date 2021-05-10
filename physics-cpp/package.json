@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build-ts": "rimraf ./dist && tsc --project lib/ts/tsconfig.json --declaration --outDir ./dist/ts/utils",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update": "git submodule foreach git pull origin main && npm run build-ts && npm version patch && git add . && git commit -m \"Updated physics-lib\""
   },
   "keywords": [],
   "author": "",
